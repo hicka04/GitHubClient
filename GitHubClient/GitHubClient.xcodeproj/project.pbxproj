@@ -9,7 +9,9 @@
 /* Begin PBXBuildFile section */
 		B846361C22E155BF00A91D8A /* GitHubClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B846361222E155BF00A91D8A /* GitHubClient.framework */; };
 		B846362122E155BF00A91D8A /* GitHubClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B846362022E155BF00A91D8A /* GitHubClientTests.swift */; };
-		B846362322E155BF00A91D8A /* GitHubClient.h in Headers */ = {isa = PBXBuildFile; fileRef = B846361522E155BF00A91D8A /* GitHubClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B8E31EE922E84EEE0030855A /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E31EE822E84EEE0030855A /* Repository.swift */; };
+		B8E31EEB22E851A80030855A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E31EEA22E851A80030855A /* User.swift */; };
+		B8E31EED22E851FB0030855A /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E31EEC22E851FB0030855A /* SearchResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,11 +26,13 @@
 
 /* Begin PBXFileReference section */
 		B846361222E155BF00A91D8A /* GitHubClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GitHubClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B846361522E155BF00A91D8A /* GitHubClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GitHubClient.h; sourceTree = "<group>"; };
 		B846361622E155BF00A91D8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B846361B22E155BF00A91D8A /* GitHubClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitHubClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B846362022E155BF00A91D8A /* GitHubClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubClientTests.swift; sourceTree = "<group>"; };
 		B846362222E155BF00A91D8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8E31EE822E84EEE0030855A /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Repository.swift; path = ../../../../../../../../../System/Volumes/Data/Users/hicka04/.ghq/github.com/hicka04/GitHubClient/GitHubClient/GitHubClient/Response/Repository.swift; sourceTree = "<group>"; };
+		B8E31EEA22E851A80030855A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = ../../../../../../../../../System/Volumes/Data/Users/hicka04/.ghq/github.com/hicka04/GitHubClient/GitHubClient/GitHubClient/Response/User.swift; sourceTree = "<group>"; };
+		B8E31EEC22E851FB0030855A /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchResponse.swift; path = ../../../../../../../../../System/Volumes/Data/Users/hicka04/.ghq/github.com/hicka04/GitHubClient/GitHubClient/GitHubClient/Response/SearchResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +75,7 @@
 		B846361422E155BF00A91D8A /* GitHubClient */ = {
 			isa = PBXGroup;
 			children = (
-				B846361522E155BF00A91D8A /* GitHubClient.h */,
+				B8E31EE722E84E6C0030855A /* Response */,
 				B846361622E155BF00A91D8A /* Info.plist */,
 			);
 			path = GitHubClient;
@@ -86,6 +90,16 @@
 			path = GitHubClientTests;
 			sourceTree = "<group>";
 		};
+		B8E31EE722E84E6C0030855A /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				B8E31EE822E84EEE0030855A /* Repository.swift */,
+				B8E31EEA22E851A80030855A /* User.swift */,
+				B8E31EEC22E851FB0030855A /* SearchResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -93,7 +107,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B846362322E155BF00A91D8A /* GitHubClient.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,6 +161,7 @@
 				TargetAttributes = {
 					B846361122E155BF00A91D8A = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1100;
 					};
 					B846361A22E155BF00A91D8A = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -194,6 +208,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8E31EEB22E851A80030855A /* User.swift in Sources */,
+				B8E31EE922E84EEE0030855A /* Repository.swift in Sources */,
+				B8E31EED22E851FB0030855A /* SearchResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +358,7 @@
 		B846362722E155BF00A91D8A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -358,6 +376,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.hicka04.GitHubClient;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -366,6 +385,7 @@
 		B846362822E155BF00A91D8A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -391,6 +411,7 @@
 		B846362A22E155BF00A91D8A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8RYHZQ93KG;
 				INFOPLIST_FILE = GitHubClientTests/Info.plist;
@@ -409,6 +430,7 @@
 		B846362B22E155BF00A91D8A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8RYHZQ93KG;
 				INFOPLIST_FILE = GitHubClientTests/Info.plist;
