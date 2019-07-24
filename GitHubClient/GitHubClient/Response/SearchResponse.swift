@@ -10,6 +10,6 @@ import Foundation
 
 public struct SearchResponse<Item: Decodable>: Decodable {
     
-    public let totalCount: Int
-    public let items: [Item]
+  public let totalCount: Int
+  public let items: [Item]
 }

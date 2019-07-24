@@ -10,7 +10,7 @@ import Foundation
 
 public enum GitHubClientError: Error {
     
-    case connectionError(Error)
-    case responseParseError(Error)
-    case apiError(GitHubAPIError)
+  case connectionError(Error)
+  case responseParseError(Error)
+  case apiError(GitHubAPIError)
 }
