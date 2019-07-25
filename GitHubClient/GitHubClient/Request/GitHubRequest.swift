@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol GitHubRequest {
+public protocol GitHubRequest {
     
   associatedtype Response: Decodable
   
@@ -18,7 +18,7 @@ protocol GitHubRequest {
   var queryItems: [URLQueryItem] { get }
 }
 
-extension GitHubRequest {
+public extension GitHubRequest {
     
   var baseURL: URL {
     return URL(string: "https://api.github.com")!

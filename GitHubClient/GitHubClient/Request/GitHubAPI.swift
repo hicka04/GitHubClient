@@ -8,31 +8,39 @@
 
 import Foundation
 
-enum GitHubAPI {
+public enum GitHubAPI {
   
-  struct SearchRepositories: GitHubRequest {
+  public struct SearchRepositories: GitHubRequest {
           
-    typealias Response = SearchResponse<Repository>
+    public typealias Response = SearchResponse<Repository>
     
-    let path: String = "/search/repositories"
-    let method: HTTPMethod = .get
-    var queryItems: [URLQueryItem] {
+    public let path: String = "/search/repositories"
+    public let method: HTTPMethod = .get
+    public var queryItems: [URLQueryItem] {
       return [URLQueryItem(name: "q", value: keyword)]
     }
     
-    let keyword: String
+    public let keyword: String
+    
+    public init(keyword: String) {
+      self.keyword = keyword
+    }
   }
   
-  struct SearchUsers: GitHubRequest {
+  public struct SearchUsers: GitHubRequest {
           
-    typealias Response = SearchResponse<User>
+    public typealias Response = SearchResponse<User>
     
-    let path: String = "/search/users"
-    let method: HTTPMethod = .get
-    var queryItems: [URLQueryItem] {
+    public let path: String = "/search/users"
+    public let method: HTTPMethod = .get
+    public var queryItems: [URLQueryItem] {
       return [URLQueryItem(name: "q", value: keyword)]
     }
     
-    let keyword: String
+    public let keyword: String
+    
+    public init(keyword: String) {
+      self.keyword = keyword
+    }
   }
 }
